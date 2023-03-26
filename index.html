@@ -50,18 +50,16 @@
   <div id="app">
     
       
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
     <main class="content on">
       
 <section class="cover">
     
-      
-      <a class="forkMe" href="https://github.com/Shen-Yu/hexo-theme-ayer"
-        target="_blank"><img width="149" height="149" src="/images/forkme.png"
-          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
-    
   <div class="cover-frame">
     <div class="bg-box">
-      <img src="/images/cover1.jpg" alt="image frame" />
+      <img src="/images/bg.jpg" alt="image frame" />
     </div>
     <div class="cover-inner text-center text-white">
       <h1><a href="/">Guan Jiu</a></h1>
@@ -154,7 +152,7 @@
     
     
     <article
-  id="post-hello-world"
+  id="post-前端学习记录"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -165,8 +163,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2023/03/24/hello-world/"
-    >Hello World</a> 
+  <a class="article-title" href="/2023/03/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"
+    >前端学习记录</a> 
 </h2>
  
 
@@ -174,26 +172,18 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/03/24/hello-world/" class="article-date">
-  <time datetime="2023-03-24T07:51:19.919Z" itemprop="datePublished">2023-03-24</time>
+      <a href="/2023/03/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="article-date">
+  <time datetime="2023-03-24T15:08:22.000Z" itemprop="datePublished">2023-03-24</time>
 </a>    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+  <p>1、数据类型的存储形式<br>栈（Stack）和堆（Heap），是两种基本的数据结构。Stack 在内存中自动分配内存空间的；Heap 在内存中动态分配内存空间的，不一定会自动释放。一般我们在项目中将对象类型手动置为 null 原因，减少无用内存消耗。<br>原始类型是按值形式存放在栈中的数据段，内存空间可以自由分配，同时可以按值直接访问。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = <span class="number">10</span>;</span><br><span class="line">var b = a;</span><br><span class="line">b = <span class="number">30</span>;</span><br><span class="line">console.log(a); // <span class="number">10</span>值</span><br><span class="line">console.log(b); // <span class="number">30</span>值</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>引用类型是存放在堆内存中，每个对象在堆内存中有一个引用地址，就像是每个房间都有一个房间号一样。引用类型在栈中保存的就是这个对象在堆内存的引用地址，我们所说的“房间号”。通过“房间号”可以快速查找到保存在堆内存的对象。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var obj1 = new Object();</span><br><span class="line">var obj2 = obj1;</span><br><span class="line">obj2.name = <span class="string">&quot;小鹿&quot;</span>;</span><br><span class="line">console.log(obj1.name); // 小鹿</span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
       
@@ -256,8 +246,6 @@
       <li>
         <!-- cnzz统计 -->
         
-        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
-        
       </li>
     </ul>
   </div>
@@ -301,14 +289,6 @@
     
     <li class="nav-item">
       <a class="nav-item-link" href="/blog">博客</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/friends">友链</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/2019/about">关于我</a>
     </li>
     
   </ul>
@@ -493,7 +473,9 @@
 <!-- ClickBoom1 -->
 
 <!-- ClickBoom2 -->
-
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
 <!-- CodeCopy -->
  
 <link rel="stylesheet" href="/css/clipboard.css">
